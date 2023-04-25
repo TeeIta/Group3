@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <h3>TODOApp</h3>
+      <form action="" class="form1">
+        <div class="myBtn input-container" id="myBtn" data-bs-target="#form">
+          <input class="input-field" type="text" placeholder="Add New Task" />
+          <i class="fa fa-plus icon"></i>
+        </div>
+      </form>
+      <hr />
+      <h3>Tasks</h3>
+
+      <form id="form" class="modal" action="/action_page.php">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-head">
+            <p>Add New Task</p>
+            <span class="close">
+              <button class="closeThis" style="color: #000">&times;</button>
+            </span>
+          </div>
+
+          <div class="text-area">
+            <div class="addNewDataArea">
+              <p>Task title</p>
+              <input
+                type="text"
+                style="
+                  background: none !important;
+                  width: 100%;
+                  padding: 10px 7px;
+                  border: 1px solid #ccc;
+                  border-radius: none !important;
+                "
+                class="form-control"
+                id="textInput"
+              />
+              <div id="errorMessage"></div>
+              <p>Due date</p>
+              <input
+                type="date"
+                style="
+                  background: none !important;
+                  width: 100%;
+                  padding: 10px 7px;
+                  border: 1px solid #ccc;
+                  border-radius: none !important;
+                "
+                class="form-control"
+                id="dateInput"
+              />
+              <div id="errorMessage2"></div>
+              <p>Description</p>
+              <textarea cols="30" rows="10" id="text" style="width: 100%; border: 1px solid #ccc; padding: 15px;"></textarea>
+              
+              <div id="errorMessage3"></div>
+            </div>
+
+            <span class="close" id="button-area">
+              <button type="button" class="close1" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button type="submit" class="save">Add</button>
+            </span>
+          </div>
+        </div>
+      </form>
+
+      <div class="tasks" id="tasks">
+       
+      </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
